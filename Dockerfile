@@ -9,4 +9,4 @@ COPY --from=build /app/out out
 COPY --from=build /app/sqlite-jdbc-3.53.4.0.jar .
 ENV PORT=8080
 EXPOSE 8080
-CMD ["java", "-cp", "out:lib/*", "library.Main"]
+CMD ["java", "-cp", "out:sqlite-jdbc-3.53.4.0.jar", "library.Main"]
